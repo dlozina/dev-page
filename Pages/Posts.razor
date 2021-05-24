@@ -1,0 +1,34 @@
+﻿@page "/posts"
+
+<div class="row justify-content-center">
+    <div class="col-10">
+        <h3>Posts</h3>
+        <hr />
+        <!-- How to write code in blog -->
+        @*<p>Example how to update client applications:</p>
+               <pre class="bg-dark text-white">
+                   <code>
+        public class LiveUpdatesHub : Hub
+        {
+           public async Task LiveUpdate()
+           {
+               await Clients.All.SendAsync("LiveUpdate");
+           }
+        }
+                   </code>
+               </pre>*@
+
+        <!-- Post no.1-->
+        <NavLink class="text-decoration-none" href="post1">
+            <h4 class="text-primary">@_postTitle1</h4>
+        </NavLink>
+        <p class="font-italic">@_postDescription1</p>
+        <p class="font-weight-light">@_publishDate</p>
+        <span class="badge badge-primary">#WebApi</span>
+        <span class="badge badge-primary">#BlazorClient</span>
+        <hr />
+    </div>
+    <div class="col-2">
+        <RightMenu />
+    </div>
+</div>
