@@ -28,11 +28,6 @@ namespace DevPage.Pages
 
         private string _leftSidebarContent2 = "Engineers, as practitioners of engineering, are professionals who invent, design, analyze, build and test machines, complex systems, structures, gadgets and materials to fulfill functional objectives and requirements while considering the limitations imposed by practicality, regulation, safety and cost.";
 
-        protected override async Task OnInitializedAsync()
-        {
-            _pageContent = await HttpClient.GetFromJsonAsync<PageContent>("data/about.json");
-        }
-
         public class PageContent
         {
             public DateTime Date { get; set; }
