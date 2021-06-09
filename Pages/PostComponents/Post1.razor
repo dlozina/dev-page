@@ -1,4 +1,76 @@
 ﻿@page "/post1"
 
-<h3>Web Api Broadcasting</h3>
+<div class="row justify-content-center">
+    <div class="col-10">
+        <h4 class="text-primary">Web Api Broadcasting</h4>
+        <p>&nbsp;</p>
+        <p>How to notify all your client apps that server content has changed?</p>
+        <p>That requirement is perhaps a standard nowadays since we have various hungry devices (and minds also 😊) for new notifications. In this article I have tested .NET signalR since it looks like it is <strong>easy to deploy, handles connection management automatically and scales easily.</strong></p>
+        <p>Goal is to write server-side code that can broadcast content changes to client as soon as the content changes. SignalR supports following WebSocekets, Server-Side Events and Long Pooling techniques for handling real-time communication. To communicate between clients and servers SignalR uses hubs. A hub is a high-level pipeline that allows a client and server to call methods on each other and we will write one of those methods.</p>
+        <p>On my <a href="https://github.com/dlozina/public-address-book">github</a> you will find finished project so that you do not need to write code yourself. We have Web API that knows how to do CRUD operations and client Blazor WebAssembly application that consumes data.</p>
+        <p>&nbsp;</p>
+        <hr />
+        <h5 class="font-weight-bold">First Step: Define a hub ✔️</h5>
+        <p>We write a custom class, and the most important thing is to inherit from Hub class.</p>
+        <p>&nbsp;</p>
 
+        <div class="text-center">
+            <img src="Posts/Post1/Picture1.png" class="rounded">
+            <p><em>Created Hub class (LiveUpdatesHub.cs)</em></p>
+        </div>
+
+        <p class="font-weight-bold">Note: be sure to add using statment for SignalR</p>
+        <p><strong>&nbsp;</strong></p>
+        <hr />
+        <h5 class="font-weight-bold">Second Step: Configure our newly created class (LiveUpdatesHub) ✔️</h5>
+        <p>All the configuration for .NET 5 or Core applications is done in application <strong>Startup.cs.&nbsp;</strong>We will need to add endpoint over which we will broadcast data.</p>
+        <p>&nbsp;</p>
+
+        <div class="text-center">
+            <img src="Posts/Post1/Picture2.png" class="rounded">
+            <p><em>Added hub endpoint in project configuration (Startup.cs)</em></p>
+        </div>
+
+        <p>And also add service in ConfigureServicesMethod</p>
+        <p>&nbsp;</p>
+
+        <div class="text-center">
+            <img src="Posts/Post1/Picture3.png" class="rounded">
+            <p><em>Added signalR services (Startup.cs)</em></p>
+        </div>
+
+        <hr />
+        <h5 class="font-weight-bold">Third Step: Notify change ✔️</h5>
+        <p>In context of this application, I want to notify or perhaps it is better to say broadcast data change. Data will change when our API receives create contact POST request. If the data is ok and we write data to DB, then we just need to call our Hub method (&ldquo;LiveUpdate&rdquo;)</p>
+        <p>&nbsp;</p>
+
+        <div class="text-center">
+            <img src="Posts/Post1/Picture4.png" class="rounded">
+            <p><em>Added broadcast method (ContactsController.cs)</em></p>
+        </div>
+
+        <p class="font-weight-bold">Note:Be sure to add hub service to controller constructor</p>
+        <p>&nbsp;</p>
+        <hr />
+        <h5 class="font-weight-bold">Fourth Step: Consume changed data ✔️</h5>
+        <p>Since we stayed in .NET world it is easy to consume change data or should I say listen to changes on client side. In our Blazor component in method OnInitializedAsync() we will make a new instance of hub HubConnectionBuilder() and register what we are listening for.</p>
+        <p>&nbsp;</p>
+
+        <div class="text-center">
+            <img src="Posts/Post1/Picture5.png" class="rounded">
+            <p><em>Added new instance of HubConnectionBuilder for client notifications (ContactOverview.razor.cs)</em></p>
+        </div>
+
+        <p class="font-weight-bold">Note: On client side, be sure to add SignalR client package</p>
+        <p>&nbsp;</p>
+        <h5 class="font-weight-bold">Conclusion 🎉 🍾</h5>
+        <p>As you can se from this example it is very easy to set up real-time updates with SignalR. On client side you are of course not limited to .NET client and on <a href="https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr?view=aspnetcore-5.0&tabs=visual-studio">this link</a> you can find examples for JavaScript and TypeScript. Also, I must mention that your hub method can have parameters, there is a nice chat example on forementioned link.</p>
+        <p>Stay well,</p>
+        <p>Dino</p>
+    </div>
+    <div class="col-2">
+        <div class="col-2 position-fixed">
+            <RightMenu />
+        </div>
+    </div>
+</div>

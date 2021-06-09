@@ -1,58 +1,35 @@
-﻿@*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+﻿<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 fixed-top">
     <div class="container">
-        <a class="navbar-brand text-light" asp-area="" asp-page="/Index">Top Menu</a>
-        <button class="navbar-toggler" @onclick="ToggleNavMenu" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href=""><h5 class="text-dark">if(Engineer) {solution}</h5></a>
+        <button class="navbar-toggler" type="button" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="@NavMenuCssClass navbar-collapse d-sm-inline-flex flex-sm-row-reverse" @onclick="CollapseNavMenu">
+        <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
             <ul class="navbar-nav flex-grow-1">
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="" Match="NavLinkMatch.All">Home</a>
+                    <NavLink class="nav-link text-dark" href="" Match="NavLinkMatch.All">
+                        <span class="oi oi-home" aria-hidden="true"></span> Home
+                    </NavLink>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="counter">Counter</a>
+                    <NavLink class="nav-link text-dark" href="projects">
+                        <span class="oi oi-project" aria-hidden="true"></span> Projects
+                    </NavLink>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="fetchdata">Fetch data</a>
+                    <NavLink class="nav-link text-dark" href="posts">
+                        <span class="oi oi-pencil" aria-hidden="true"></span> Posts
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link text-dark" href="about">
+                        <span class="oi oi-book" aria-hidden="true"></span> About
+                    </NavLink>
                 </li>
             </ul>
         </div>
     </div>
-</nav>*@
-
-<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container">
-            <a class="navbar-brand" href=""><h5 class="text-dark">if(Engineer) {solution}</h5></a>
-            <button class="navbar-toggler" type="button" @onclick="ToggleNavMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <NavLink class="nav-link text-dark" href="" Match="NavLinkMatch.All">
-                            <span class="oi oi-home" aria-hidden="true"></span> Home
-                        </NavLink>
-                    </li>
-                    <li class="nav-item">
-                        <NavLink class="nav-link text-dark" href="projects">
-                            <span class="oi oi-project" aria-hidden="true"></span> Projects
-                        </NavLink>
-                    </li>
-                    <li class="nav-item">
-                        <NavLink class="nav-link text-dark" href="posts">
-                            <span class="oi oi-pencil" aria-hidden="true"></span> Posts
-                        </NavLink>
-                    </li>
-                    <li class="nav-item">
-                        <NavLink class="nav-link text-dark" href="about">
-                            <span class="oi oi-book" aria-hidden="true"></span> About
-                        </NavLink>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+</nav>
 
 @code {
         private bool collapseNavMenu = true;
@@ -69,6 +46,7 @@
         }
     }
 
+<!-- TO DO - Try colapsse menu -->
 @*@code {
     bool collapseNavMenu = true;
 
