@@ -10,6 +10,10 @@ a.navbar-brand {
     word-break: break-all;
 }
 
+.graybackground {
+    background-color: #FAFAFA;
+}
+
 /* Provide sufficient contrast against white background */
 a {
     color: #0366d6;
