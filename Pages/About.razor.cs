@@ -11,9 +11,6 @@ namespace DevPage.Pages
 {
     public partial class About
     {
-        [Inject]
-        public HttpClient HttpClient { get; set; }
-
         private PageContent _pageContent;
 
         private string _paragraph1 = "My name is Dino Lozina, an engineer from Split, Croatia. I have been programming for more than ten years. As an electrical engineer my first professional programming experience was with Programmable Logic Controllers (PLC). We where machine builders, and we did all of our machine programming.";
