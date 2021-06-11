@@ -21,9 +21,9 @@ jobs:
       - name: Publish .NET Core Project
         run: dotnet publish DevPage.csproj -c Release -o release --nologo
         
-      # changes the base-tag in index.html from '/' to 'https://dlozina.github.io/dev-page/' to match GitHub Pages repository subdirectory
-      - name: Change base-tag in index.html from / to https://dlozina.github.io/dev-page/
-        run: sed -i 's/<base href="\/" \/>/<base href="https:\/\/dlozina.github.io\/dev-page\/" \/>/g' release/wwwroot/index.html  
+      # changes the base-tag in index.html from '/' to 'dev-page' to match GitHub Pages repository subdirectory
+      - name: Change base-tag in index.html from / to dev-page
+        run: sed -i 's/<base href="\/" \/>/<base href="\/dev-page\/" \/>/g' release/wwwroot/index.html  
       
       # copy index.html to 404.html to serve the same file when a file is not found
       - name: copy index.html to 404.html
