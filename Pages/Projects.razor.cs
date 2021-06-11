@@ -11,7 +11,7 @@ namespace DevPage.Pages
         private string _projectTitle1 = "Podravka, Koprivnica, Croatia";
         private string _projectTime1 = "12/2020 - today";
         private string _projectWork1 = "Development, debugging, testing, user support";
-        private string _projectTech1 = "C#, ASP.NET, WPF, jQuerry, SQL (ORM)";
+        private string _projectTech1 = "C#, ASP.NET, WPF, jQuery, SQL (ORM)";
         private string _projectList11 = "Automation of payment order processes";
         private string _projectList12 = "Developing email service that gathers relevant data";
         private string _projectList13 = "Developing UI settings for consultant and testing teams";
@@ -21,25 +21,25 @@ namespace DevPage.Pages
         private string _projectTitle2 = "Financial Agency (Fina), Zagreb, Croatia";
         private string _projectTime2 = "04/2020 - 12/2020";
         private string _projectWork2 = "Development, debugging, testing, user support";
-        private string _projectTech2 = "C#, ASP.NET, jQuerry, SQL (ORM) , various OCR engines (Nicomsoft, Abbyy,Tesseract), machine learning(.NET ML), OpenCV, Camunda";
+        private string _projectTech2 = "C#, ASP.NET, jQuery, SQL (ORM) , various OCR engines (Nicomsoft, Abbyy,Tesseract), machine learning(.NET ML), OpenCV, Camunda";
         private string _projectList21 = "Automation of payment order processes";
         private string _projectList22 = "Developing selfhost API";
         private string _projectList23 = "Using machine learning to classify types of documents";
         private string _projectList24 = "Using machine vision to classify types of documents";
         private string _projectList25 = "Using OCR (Optical character recognition) to gather data from documents";
         private string _projectList26 = "Using machine learning to correct wrong data points";
-        private string _projectList27 = "Frontend development (HTML, CSS, jQuerry)";
+        private string _projectList27 = "Frontend development (HTML, CSS, jQuery)";
 
         // Project No.3 - IT project
         private string _projectTitle3 = "Vienna Insurance Group, Zagreb, Croatia";
         private string _projectTime3 = "10/2019 - 04/2020";
         private string _projectWork3 = "Development, debugging, testing, user support";
-        private string _projectTech3= "C#, ASP.NET, jQuerry, SQL (ORM), machine learning (.NET ML), OpenCV, Camunda";
+        private string _projectTech3= "C#, ASP.NET, jQuery, SQL (ORM), machine learning (.NET ML), OpenCV, Camunda";
         private string _projectList31 = "Development of mobile application that automates insurance purchase";
         private string _projectList32 = "Development of server-side services";
         private string _projectList33 = "Using machine learning to classify types of documents";
         private string _projectList34 = "Developing UI settings for consultant and testing teams";
-        private string _projectList35 = "Frontend development (HTML, CSS, jQuerry)";
+        private string _projectList35 = "Frontend development (HTML, CSS, jQuery)";
 
         // Project No.4 - IT project
         private string _projectTitle4 = "University of Split, Split, Croatia";

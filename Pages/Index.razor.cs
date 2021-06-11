@@ -16,7 +16,7 @@ namespace DevPage.Pages
 
         private string _paragraph3 = "I would also love to see where Web Assembly (abbreviated Wasm) will lead us in context of web development. Interesting times are ahead of us.";
 
-        private string _paragraph4 = "Well since I am testing I might as well intruduce myself and build my knowledge base 😊";
+        private string _paragraph4 = "Well since I am testing I might as well introduce myself and build my knowledge base 😊";
 
         private string _leftSidebarTitle2 = "Engineer (definition)";
 
