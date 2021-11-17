@@ -9,7 +9,7 @@ namespace DevPage.Pages
     {
         // Project No.1 - IT project
         private string _projectTitle1 = "Podravka, Koprivnica, Croatia";
-        private string _projectTime1 = "12/2020 - today";
+        private string _projectTime1 = "12/2020 - 08/2021";
         private string _projectWork1 = "Development, debugging, testing, user support";
         private string _projectTech1 = "C#, ASP.NET, WPF, jQuery, SQL (ORM)";
         private string _projectList11 = "Automation of payment order processes";
@@ -157,5 +157,15 @@ namespace DevPage.Pages
         private string _projectList141 = "Research for master thesis";
         private string _projectList142 = "Collaboration between French colleges and home institution (FESB)";
         private string _projectList143 = "Published paper on subject (Transmission Line Theory approach used on Typical Power Line Communication Structures)";
+        
+        // Project No.15 - Engineering project
+        private string _projectTitle15 = "Infobip, Vodnjan, Croatia";
+        private string _projectTime15 = "08/2021 - today";
+        private string _projectWork15 = "Development, debugging, testing, user support";
+        private string _projectTech15 = "C#, .NET, Web API, Go";
+        private string _projectList151 = "Developing API libraries";
+        private string _projectList152 = "Developing different SDKs";
+        private string _projectList153 = "Developing and researching new ways to improve developer workflows and practices";
+        private string _projectList154 = "Brainstorming with a team about new technical solutions and possible improvements";
     }
 }
