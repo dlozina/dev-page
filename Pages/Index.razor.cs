@@ -14,7 +14,7 @@ namespace DevPage.Pages
 
         private string _paragraph2 = "This is my test page where I test .NET 5 and Blazor WASM, I play around with this relatively new frontend framework. It would be really cool to write whole application (front and back) with C# code.";
 
-        private string _paragraph3 = "Looking forward to .NET6 test I mean migration 🚀 🚀 🚀";
+        private string _paragraph3 = "Looking forward to .NET6 tests and migration 🚀 🚀 🚀";
 
         private string _paragraph4 = "I would also love to see where Web Assembly (abbreviated Wasm) will lead us in context of web development. Interesting times are ahead of us.";
 
