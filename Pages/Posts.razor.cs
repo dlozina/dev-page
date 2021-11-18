@@ -19,7 +19,7 @@ namespace DevPage.Pages
         
         // Post 3
         private string _postTitle3 = "How to schedule tasks in .NET?";
-        private string _postDescription3 = "Scheduling jobs in applications can be a really daunting work but it doesn't have to";
-        private string _publishDate3 = "Published: 11.11.2021";
+        private string _postDescription3 = "Scheduling tasks in applications can be a really daunting work but it doesn't have to be.";
+        private string _publishDate3 = "Published: 18.11.2021";
     }
 }
